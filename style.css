@@ -1,1 +1,78 @@
-lalalal
+body {
+  text-align: center;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 40px;
+}
+
+.movie {
+  flex-basis: 25%;
+  text-align: justify;
+  margin: 20px 20px;
+  max-width: 280px;
+  cursor: pointer;
+}
+
+.movie:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
+  transform: translate3D(0, -2px, 0);
+}
+
+.title {
+  font-weight: 900;
+  font-size: 1.3rem;
+  background-color: rgba(93, 189, 189, 0.89);
+  border-top-left-radius: 19px;
+  border-top-right-radius: 19px;
+  text-align: center;
+  padding: 30px 8px;
+  color: aliceblue;
+  max-height: 110px;
+  min-height: 110px;
+  min-width: 218px;
+  line-height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.director {
+  text-align: center;
+  margin: 15px 5px;
+  font-style: italic;
+}
+
+.description {
+  margin: 25px 25px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 850px) {
+  .movie {
+    max-width: 218px;
+  }
+  .title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .title {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 363px) {
+  .title {
+    line-height: 34px;
+  }
+}
