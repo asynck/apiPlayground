@@ -11,7 +11,7 @@ fetch("https://ghibliapi.herokuapp.com/films")
   })
   .then(function(myJson) {
     console.log(myJson);
-    myJson.forEach(function(film) {
+    myJson.forEach(function(film, index) {
       let movie = document.createElement("div");
       movie.classList.add("movie", "border");
       main.appendChild(movie);
@@ -20,13 +20,17 @@ fetch("https://ghibliapi.herokuapp.com/films")
       let div3 = document.createElement("div");
       div1.innerText = film.title;
       div2.innerText = film.director + ", " + film.release_date;
-      div3.innerText = film.description.substring(0, 300) + "...";
+      div3.innerText = film.description.substring(0, 30) + "...";
       div1.classList.add("title");
       div2.classList.add("director");
       div3.classList.add("description");
       movie.appendChild(div1);
       movie.appendChild(div2);
       movie.appendChild(div3);
+      let textSplit = film.title.split(" ").join("_");
+      movie.addEventListener("click", function() {
+        window.open("https://en.wikipedia.org/wiki/" + textSplit, "WikiPage");
+      });
     });
   })
   .catch(function(error) {
