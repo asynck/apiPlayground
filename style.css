@@ -15,10 +15,9 @@ h1 {
 }
 
 .movie {
-  flex-basis: 25%;
-  text-align: justify;
+  flex-basis: 23%;
+  text-align: -webkit-auto;
   margin: 20px 20px;
-  max-width: 280px;
   cursor: pointer;
 }
 
@@ -54,11 +53,13 @@ h1 {
 .description {
   margin: 25px 25px;
   font-size: 0.8rem;
+  line-height: 20px;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1200px) {
   .movie {
-    max-width: 218px;
+    flex-basis: 60%;
+    max-width: 258px;
   }
   .title {
     font-size: 1.1rem;

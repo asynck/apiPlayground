@@ -20,7 +20,7 @@ fetch("https://ghibliapi.herokuapp.com/films")
       let div3 = document.createElement("div");
       div1.innerText = film.title;
       div2.innerText = film.director + ", " + film.release_date;
-      div3.innerText = film.description.substring(0, 400) + "...";
+      div3.innerText = film.description.substring(0, 300) + "...";
       div1.classList.add("title");
       div2.classList.add("director");
       div3.classList.add("description");
